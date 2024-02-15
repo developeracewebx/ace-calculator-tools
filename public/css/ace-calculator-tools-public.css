@@ -1,0 +1,694 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+/* //BMI calculator */
+ #calculator {background-color: #fff;margin: 20px auto;padding: 20px;border-radius: 5px;box-shadow: 0px 0px 10px #ccc;}
+   #outputTable {width: 100%;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
+   #outputTable tr {border-bottom: 1px solid #ddd;}
+   #outputTable tr:hover {background-color: #e0e0e0;}
+   #outputTable th, #outputTable td {padding: 10px;width: 50%;}
+   #outputTable th {background-color: #f2f2f2;}
+   div#calculator label {font-weight: 600;}
+   h3.thead {background-color: #444444;color: white; margin-bottom: 0px;padding: 10px;}
+   div#calculator h2 {color: #337AB7;font-weight: 800;padding: 0px 0px 15px 0px;font-size: 25px;margin: 0;line-height: 1;}
+   #bmiText {font-size: 20px !important;}
+   button#clear {padding: 6px 12px;font-size: 14px;border-radius: 4px;font-weight: 700;border: 1px solid lightgrey;text-transform: capitalize;}
+   select#gender {border: 1px solid grey;width: 100%;}
+   h3.thead {text-transform: capitalize;}
+   a.nav-link.active {color: #337AB7 !important;background-color: #e5e4e4 !important;border-color: #337AB7 !important;border: 1px solid !important;border-radius: 0px !important;}
+   a.nav-link {color: #000 !important;background-color: #fff !important;border: 1px solid #000 !important;border-radius: 0px !important;}
+   ul#unitTabs {border: none;}
+   .nav-tabs .nav-item {margin: 0 10px 5px 0px;}
+   li.nav-item a {padding: 6px 12px;font-weight: 700;}
+   @media screen and (max-width: 414px){
+      #calculator {margin: 0px auto;}
+   }
+
+   /* BMR calculator */
+   #calculator {background-color: #fff;margin: 20px auto;padding: 20px;border-radius: 5px;box-shadow: 0px 0px 10px #ccc;}
+   #outputTable {width: 100%;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
+   #outputTable tr {border-bottom: 1px solid #ddd;}
+   #outputTable tr:hover {background-color: #e0e0e0;}
+   #outputTable th, #outputTable td {padding: 10px;width: 50%;}
+   #outputTable th {background-color: #f2f2f2;}
+   div#calculator label {font-weight: 600;}
+   h3.thead {background-color: #444444;color: white; margin-bottom: 0px;padding: 10px;}
+   div#calculator h2 {color: #337AB7;font-weight: 800;padding: 0px 0px 15px 0px;font-size: 25px;margin: 0;line-height: 1;}
+   button#clear {padding: 6px 12px;font-size: 14px;border-radius: 4px;font-weight: 700;border: 1px solid lightgrey;text-transform: capitalize;}
+   select#gender {border: 1px solid grey;width: 100%;}
+   h3.thead {text-transform: capitalize;}
+   button#Clear {padding: 6px 12px;font-size: 14px;border-radius: 4px;font-weight: 700;border: 1px solid lightgrey;text-transform: capitalize;}
+   .resultoutput {display:flex; margin-right: 10px;}
+   .resultchangeoption {  display: flex;margin-bottom: 12px;}
+   .radioinput {  margin-right: 7px;}
+   a.nav-link.active-tab {color: #337AB7 !important;background-color: #e5e4e4 !important;border-color: #337AB7 !important;border: 1px solid !important;border-radius: 0px !important;}
+   a.nav-link {color: #000 !important;background-color: #fff !important;border: 1px solid #000 !important;border-radius: 0px !important;}
+   ul#unitTabs {border: none;}
+   .nav-tabs .nav-item {margin: 0 10px 5px 0px;}
+   li.nav-item a {padding: 6px 12px;border: 1px solid transparent;border-radius: 4px;font-weight: 700;}
+   .nav-link {cursor: pointer;}
+   #Resultslabel {margin-top: 22px;}
+
+   /* Body fat calculator */
+   #calculator {background-color: #fff;margin: 20px auto;padding: 20px;border-radius: 5px;box-shadow: 0px 0px 10px #ccc;}
+   #outputTable {width: 100%;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
+   #outputTable tr {border-bottom: 1px solid #ddd;}
+   #outputTable tr:hover {background-color: #e0e0e0;}
+   #outputTable th, #outputTable td {padding: 10px;width: 50%;}
+   #outputTable th {background-color: #f2f2f2;}
+   div#calculator label {font-weight: 600;}
+   h3.thead {background-color: #444444;color: white; margin-bottom: 0px;padding: 10px;}
+   div#calculator h2 {color: #337AB7;font-weight: 800;padding: 0px 0px 15px 0px;font-size: 25px;margin: 0;line-height: 1;}
+   #bmiText {font-size: 20px !important;}
+   button#clear {padding: 6px 12px;font-size: 14px;border-radius: 4px;font-weight: 700;border: 1px solid lightgrey;text-transform: capitalize;}
+   select#gender {border: 1px solid grey;width: 100%;}
+   h3.thead {text-transform: capitalize;}
+   a.nav-link.active {color: #337AB7 !important;background-color: #e5e4e4 !important;border-color: #337AB7 !important;border: 1px solid !important;border-radius: 0px !important;}
+   a.nav-link {color: #000 !important;background-color: #fff !important;border: 1px solid #000 !important;border-radius: 0px !important;}
+   ul#unitTabs {border: none;}
+   .nav-tabs .nav-item {margin: 0 10px 5px 0px;}
+   li.nav-item a {padding: 6px 12px;font-weight: 700;}
+
+   /* calculator */
+   div#calculator {background-color: #fff;margin: 20px auto;padding: 20px;border-radius: 5px;box-shadow: 0px 0px 10px #ccc;}
+div#calculator h2 {color: #337AB7;font-weight: 800;padding: 0px 0px 15px 0px;font-size: 25px;margin: 0;line-height: 1;}
+.calculator {width: 100%;border-collapse: collapse;}
+.calculator td {width: 20%;text-align: center;padding: 10px;}
+input[type="button"] {width: 100%;height: 40px;font-size: 16px;}
+#display {width: 100%;height: 40px;font-size: 24px;text-align: right;padding: 5px;}
+.btnTop, .btnOpps, .btnMath {background-color: #f0f0f0;color: #000;}
+.btnNum {background-color: #fff;color: #000;}
+input[type="button"]:hover {background-color: #d4d4d4;}
+
+@media (max-width: 585px){
+div#calculator {padding: 5px;}
+}
+
+/* calories calculator */
+#calculator {background-color: #fff;margin: 20px auto;padding: 20px;border-radius: 5px;box-shadow: 0px 0px 10px #ccc;}
+#outputTable {width: 100%;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
+#outputTable tr {border-bottom: 1px solid #ddd;}
+#outputTable tr:hover {background-color: #e0e0e0;}
+#outputTable th,
+#outputTable td {padding: 10px;width: 50%;}
+#outputTable th {background-color: #f2f2f2;}
+h3.thead {padding: 10px;background-color: #444444;color: white;margin-bottom: 0px;}
+.tab-container {margin-top: 20px;display: flex;}
+.tab {cursor: pointer;margin: 0 10px;color: #000 !important;background-color: #fff !important;border: 1px solid #000 !important;border-radius: 0px !important;}
+li.nav-item a {padding: 6px 12px;font-weight: 700; margin-left: 1px;}
+#lengthinput {display: flex;}
+.inputothertab {display: flex;}
+#cactivity {background-color: #fff;border: 1px solid grey;outline: none;padding: 8px 10px;margin: 0;width: 100%;}
+a.nav-link.active {color: #337AB7 !important;background-color: #e5e4e4 !important;border-color: #337AB7 !important;border: 1px solid !important;border-radius: 0px !important;}
+.active-tab {background-color: #ddd !important;border: 1px solid #337ab7 !important;color: #337ab7 !important;}
+ul#unitTabs {border: none;}
+select#gender { border: 1px solid grey;width: 100%;}
+div#calculator label { font-weight: 600;}
+div#calculator h2 { color: #337AB7; font-weight: 800; padding: 0px 0px 15px 0px; font-size: 25px;margin: 0;line-height: 1;}
+.resultoutput {display:flex; margin-right: 10px;}
+.resultchangeoption {  display: flex;margin-bottom: 12px;}
+.radioinput {  margin-right: 7px;}
+#clear {padding: 6px 12px; font-size: 14px; border-radius: 4px;font-weight: 700;border: 1px solid lightgrey; text-transform: capitalize;}
+
+/* Divident calculator */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Gabarito:wght@400;700;900&family=Gloria+Hallelujah&family=Inter&family=Kablammo&family=Lato&family=Montserrat&family=Phudu&family=Roboto&display=swap');
+
+.bxdv {
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 1px #d0d0d0;
+    overflow: hidden;
+    position: relative;
+}
+
+.bxdvh {
+    text-align: center;
+    padding: 10px 5px;
+    border-bottom: solid 1px #dfdfdf;
+}
+
+.bxdvh h2 {
+    font-weight: normal;
+    font-size: 17px;
+    margin: 0px;
+}
+
+/* added custom css */
+.inp_txt .bxdvh {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #005f89;
+    color: white;
+    padding: 0 10px 0px 20px;
+}
+
+.inp_txt {
+    border-radius: 2px;
+    border: none;
+}
+
+.inp_txt h2 {
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: normal;
+}
+
+.bxdvb {
+    padding: 20px;
+}
+
+#noYearsType {
+    padding: 0px;
+    border-radius: 0px
+}
+
+#cmpFrequency {
+    width: 100%;
+    padding: 2px;
+    border-radius: 1px;
+}
+
+.result .row {
+    margin: 0;
+}
+
+select#dropdownCurrency {
+    padding: 0px;
+    border-radius: 0px;
+}
+
+.result td,
+.result th,
+.result table,
+.result table thead th {
+    border: none;
+}
+
+.result thead {
+    background-color: #005f89 !important;
+    color: white;
+}
+
+.result table .text-center {
+    background-color: rgb(60, 64, 67) !important;
+    color: white;
+}
+
+.btnDesign {
+    font-family: 'Gabarito';
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    background: linear-gradient(95.64deg, #1c3d9f 0%, #3096cb 100.33%);
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    padding: 6px 18px;
+    margin-bottom: 20px;
+}
+
+.topInfo {
+    background: rgb(60, 64, 67);
+    padding: 20px;
+}
+
+.topInfo .blc,
+.topInfo .rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-transform: uppercase;
+}
+
+.topInfo .blc p,
+.topInfo .rate p {
+    color: #4A4A4A;
+    font-weight: 500;
+    font-family: 'Gabarito';
+    letter-spacing: 2px;
+    font-size: 32px;
+}
+
+.topInfo .blc span,
+.topInfo .rate span {
+    font-size: 18px;
+    letter-spacing: normal;
+    color: #e8eaed;
+    margin-left: 5px;
+}
+
+.topInfo .rate p {
+    font-size: 24px;
+}
+
+.topInfo .rate span {
+    font-size: 16px;
+}
+
+.stockUp {
+    color: #81c995 !important;
+}
+
+.stockDown {
+    color: #f28b82 !important;
+}
+
+#myChart,
+.resTable {
+    padding: 20px;
+}
+
+.result h2 {
+    color: #363636;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-family: 'Gabarito';
+    text-transform: capitalize;
+}
+
+@media only screen and (max-width:768px) {
+
+    .topInfo .blc,
+    .topInfo .rate {
+        flex-direction: column;
+    }
+}
+
+/* energy calculator */
+#calculator {background-color: #fff;margin: 20px auto;padding: 20px;border-radius: 5px;box-shadow: 0px 0px 10px #ccc;}
+div#calculator label {font-weight: 600;}
+div#calculator h2 {color: #337AB7;font-weight: 800;font-size: 25px;margin: 0;line-height: 1;}
+select#type {border: 1px solid grey;width:100%;}
+#calculator input[type="number"] {width: 100%;border: 1px solid grey;border-radius: 6px;}
+.col-md-2.valueouput {display: -webkit-box;}
+.col-md-2.valueouput label {margin-right: 5px;}
+select#resulttype {border: 1px solid grey;width:100%;}
+div#result {background-color: #fff;outline: none;padding: 8px 10px;border: 1px solid grey;border-radius: 6px;outline: none;width: 100%;}
+
+
+/* ideal weight calculator */
+#calculator {background-color: #fff;margin: 20px auto;padding: 20px;border-radius: 5px;box-shadow: 0px 0px 10px #ccc;}
+#outputTable {width: 100%;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
+#outputTable tr {border-bottom: 1px solid #ddd;}
+#outputTable tr:hover {background-color: #e0e0e0;}
+#outputTable th, #outputTable td {padding: 10px;width: 50%;}
+#outputTable th {background-color: #f2f2f2;}
+div#calculator label {font-weight: 600;}
+h3.thead {background-color: #444444;color: white; margin-bottom: 0px;padding: 10px;}
+div#calculator h2 {color: #337AB7;font-weight: 800;padding: 0px 0px 15px 0px;font-size: 25px;margin: 0;line-height: 1;}
+#bmiText {font-size: 20px !important;}
+button#clear {padding: 6px 12px;font-size: 14px;border-radius: 4px;font-weight: 700;border: 1px solid lightgrey;text-transform: capitalize;}
+select#gender {border: 1px solid grey;width: 100%;}
+h3.thead {text-transform: capitalize;}
+a.nav-link.active {color: #337AB7 !important;background-color: #e5e4e4 !important;border-color: #337AB7 !important;border: 1px solid !important;border-radius: 0px !important;}
+a.nav-link {color: #000 !important;background-color: #fff !important;border: 1px solid #000 !important;border-radius: 0px !important;}
+ul#unitTabs {border: none;}
+.nav-tabs .nav-item {margin: 0 10px 5px 0px;}
+li.nav-item a {padding: 6px 12px;font-weight: 700;}
+
+/* salary calculator */
+
+#calculator {background-color: #fff;margin: 20px auto;padding: 20px;border-radius: 5px;box-shadow: 0px 0px 10px #ccc;}
+#outputTable {width: 100%;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
+#outputTable tr {border-bottom: 1px solid #ddd;}
+#outputTable tr:hover {background-color: #e0e0e0;}
+#outputTable th, #outputTable td {padding: 10px;width: 50%;}
+#outputTable th {background-color: #f2f2f2;}
+div#calculator label {font-weight: 600;}
+h3.thead {background-color: #444444;color: white; margin-bottom: 0px;padding: 10px;}
+div#calculator h2 {color: #337AB7;font-weight: 800;padding: 0px 0px 15px 0px;font-size: 25px;margin: 0;line-height: 1;}
+#bmiText {font-size: 20px !important;}
+button#clear {padding: 6px 12px;font-size: 14px;border-radius: 4px;font-weight: 700;border: 1px solid lightgrey;text-transform: capitalize;}
+select#gender {border: 1px solid grey;width: 100%;}
+h3.thead {text-transform: capitalize;}
+a.nav-link.active {color: #337AB7 !important;background-color: #e5e4e4 !important;border-color: #337AB7 !important;border: 1px solid !important;border-radius: 0px !important;}
+a.nav-link {color: #000 !important;background-color: #fff !important;border: 1px solid #000 !important;border-radius: 0px !important;}
+ul#unitTabs {border: none;}
+.nav-tabs .nav-item {margin: 0 10px 5px 0px;}
+li.nav-item a {padding: 6px 12px;font-weight: 700;}
+
+/* screen aspect ratio calculator */
+
+.col-12.mt-3.calculator {
+    padding: 0;
+}
+
+.col-md-12.valueouput {
+    background-color: #f2f2f2;
+    /* padding: 10px 0px 0px 15px; */
+    border: 1px solid #eee;
+}
+
+.col-md-12.valueouput span {
+    color: #d9534f;
+    font-weight: 600;
+}
+
+.col-md-12.clc3 select {
+    width: 20% !important;
+    padding: 2px !important;
+}
+
+.col-md-12.clc3 input[type="number"] {
+    width: 20% !important;
+    padding: 2px !important;
+}
+
+.col-md-12.clc4 input[type="number"] {
+    width: 20% !important;
+    padding: 2px !important;
+    margin: 5px;
+}
+
+#calculator {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+div#calculator label {
+    font-weight: 600;
+}
+
+div#calculator h5 {
+    color: #337AB7;
+    font-weight: 800;
+    font-size: 15px;
+    margin: 0;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+select#type {
+    border: 1px solid grey;
+    width: 100%;
+}
+
+#calculator input[type="number"] {
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 6px;
+}
+
+.types-select {
+    border: 1px solid grey;
+    width: 100%;
+}
+
+#diagonalRatio {
+
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid grey;
+    width: 100PX;
+}
+
+#unit {
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid grey;
+    width: 100PX;
+}
+
+.col-md-12.clc3 p {
+    margin: 25px 0px 0px 0px;
+}
+
+.col-md-12.clc4 p {
+    margin: 25px 0px 25px 0px;
+}
+
+
+
+.form-generator .nav-tabs {
+    display: flex;
+    border-bottom: 1px solid #eeeeee !important;
+    gap: 10px;
+    margin: 0 0 12px;
+}
+.form-generator .nav-tabs li.nav-item {
+    margin: 0 !important;
+    list-style: none;
+}
+.form-generator .nav-tabs li.nav-item a {
+    display: flex;
+    text-decoration: none;
+    border-radius: 3px 3px 0px 0px !important;
+    background: #f5f5f5 !important;
+    border-top: 1px solid #ddd !important;
+    border-left: 1px solid #ddd !important;
+    border-right: 1px solid #ddd !important;
+    border-bottom: none !important;
+    padding: 6px 22px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px !important;
+    color: #171b25 !important;
+    margin: 0;
+}
+.form-generator .nav-tabs li.nav-item a.active {
+    background: #b82025 !important;
+    color: #fff !important;
+    border-color: #b82025 !important;
+}
+.form-generator .nav-tabs li.nav-item a.active-tab {
+    background: #b82025 !important;
+    color: #fff !important;
+    border-color: #b82025 !important;
+}
+.form-generator form input[type="radio"] {
+    height: auto;
+}
+
+@media screen and (max-width: 767px) {
+ 
+
+    #result {
+        overflow: auto;
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Gabarito:wght@400;700;900&family=Gloria+Hallelujah&family=Inter&family=Kablammo&family=Lato&family=Montserrat&family=Phudu&family=Roboto&display=swap');
+
+.bxdv {
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 1px #d0d0d0;
+    overflow: hidden;
+    position: relative;
+}
+
+.bxdvh {
+    text-align: center;
+    padding: 10px 5px;
+    border-bottom: solid 1px #dfdfdf;
+}
+
+.bxdvh h2 {
+    font-weight: normal;
+    font-size: 17px;
+    margin: 0px;
+}
+
+/* added custom css */
+.inp_txt .bxdvh {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #005f89;
+    color: white;
+    padding: 0 10px 0px 20px;
+}
+
+.inp_txt {
+    border-radius: 2px;
+    border: none;
+}
+
+.inp_txt h2 {
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: normal;
+}
+
+.bxdvb {
+    padding: 20px;
+}
+
+#noYearsType {
+    padding: 0px;
+    border-radius: 0px
+}
+
+#cmpFrequency {
+    width: 100%;
+    padding: 2px;
+    border-radius: 1px;
+}
+
+.result .row {
+    margin: 0;
+}
+
+select#dropdownCurrency {
+    padding: 0px;
+    border-radius: 0px;
+}
+
+.result td,
+.result th,
+.result table,
+.result table thead th {
+    border: none;
+}
+
+.result thead {
+    background-color: #005f89 !important;
+    color: white;
+}
+
+.result table .text-center {
+    background-color: rgb(60, 64, 67) !important;
+    color: white;
+}
+
+.btnDesign {
+    font-family: 'Gabarito';
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    background: linear-gradient(95.64deg, #1c3d9f 0%, #3096cb 100.33%);
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    padding: 6px 18px;
+    margin-bottom: 20px;
+}
+
+.topInfo {
+    background: rgb(60, 64, 67);
+    padding: 20px;
+}
+
+.topInfo .blc,
+.topInfo .rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-transform: uppercase;
+}
+
+.topInfo .blc p,
+.topInfo .rate p {
+    color: #4A4A4A;
+    font-weight: 500;
+    font-family: 'Gabarito';
+    letter-spacing: 2px;
+    font-size: 32px;
+}
+
+.topInfo .blc span,
+.topInfo .rate span {
+    font-size: 18px;
+    letter-spacing: normal;
+    color: #e8eaed;
+    margin-left: 5px;
+}
+
+.topInfo .rate p {
+    font-size: 24px;
+}
+
+.topInfo .rate span {
+    font-size: 16px;
+}
+
+.stockUp {
+    color: #81c995 !important;
+}
+
+.stockDown {
+    color: #f28b82 !important;
+}
+
+#myChart,
+.resTable {
+    padding: 20px;
+}
+
+.result h2 {
+    color: #363636;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-family: 'Gabarito';
+    text-transform: capitalize;
+}
+
+@media only screen and (max-width:768px) {
+
+    .topInfo .blc,
+    .topInfo .rate {
+        flex-direction: column;
+    }
+}
+.form-generator form select {
+    height: 40px;
+    border: 1px solid #212121 !important;
+    padding: 5px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.form-generator form input {
+    height: 40px;
+    border: 1px solid #212121;
+    padding: 6px;
+    font-size: 16px;
+}
+.form-generator input.btn.btn-primary {
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.form-generator input.btn.btn-primary:hover {
+    background: black;
+    color: white;
+}
+
+.form-generator button#clear:hover {
+    background: black;
+    color: white;
+}
+
+.form-generator input[type="number"] {
+    height: 37px;
+    font-size:18px;
+}
+
+
+
+.form-generator .types-select {
+    height: 34px;
+    font-size: 19px;
+}
+
+.form-generator button.btn.btn-primary.cmp {
+    height: 45px;
+    width: 17%;
+    border-radius: 7px;
+    font-size: 19px;
+}
+.form-generator input.btn.btn-primary.cmp:hover {
+    background: black;
+    color: white;
+}
+img.preview-img {
+    width: 100%;
+}
